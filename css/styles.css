@@ -153,14 +153,14 @@ body{
     height: auto; 
 }
 
-/*para definir un area de cada widget se hace por separado*/
+/*para definir un area se hace por separado*/
 .contenedor .texto-1{
     grid-area: texto-1; 
     padding: 4em;   
 }
 
 .main-somos article{
-    font-size: 1.05em; /*para width 100% en main-widget 1.5em*/
+    font-size: 1.05em;
     color: #F8F8FF ;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
