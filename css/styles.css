@@ -1,0 +1,271 @@
+
+/*******************************************
+    para un mejor diseño poner en el navegador 
+    inspeccionar elemento, click en la casilla
+    de div contenedor, areas.
+    veremos las areas que definiremos en el div contenedor usando la siguiente instruccion
+    grid template areas:
+        1.-header(3 columnas )
+        2.-contenido y sidebar
+             (2 columnas contenido y 1 columna sidebar)
+        3.-widget-1 widget 2 y sidebar
+           (col.widget1 col. widget-2 sidebar)
+        4.-footer
+    Ademas en cada clase escribiremos :
+    header    --->  grid-area: header;
+    contenido --->  grid-area: contenido;
+    widget-1  --->  grid-area: widget-1;
+    widget-2  --->  grid-area: widget-2;
+***********************************************
+*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+   
+    background: #8f9fc0;
+    font-family: 'Roboto', sans-serif;
+}
+/***********************
+        contenedor
+************************
+ definimos la grilla css
+ por areas */
+.contenedor{
+    width: 100%;
+    margin: 0px auto;/*centrar el div*/
+    display: grid;
+    grid-template-columns: repeat(3,1fr);/*cant. de columnas*/
+    grid-template-rows: repeat(4,auto);/*cantidad de filas)*/
+   
+    grid-template-areas: 
+        "headerb headerb headerb"
+        "slideshow-container slideshow-container slideshow-container"
+        "main-somos main-somos main-somos"
+        "footerb footerb footerb";
+}
+/**********************
+        header
+***********************
+*/
+.contenedor .headerb{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,auto);
+    grid-template-areas: 
+        "logo menu menu "
+    ;
+
+}
+
+.contenedor .headerb{
+    grid-area: headerb;
+    background: #bd033b;
+    width: 100%;
+    margin: 0px auto;
+    min-height: 80px;
+}
+ .contenedor .logo{
+    grid-area: logo;
+}
+
+.contenedor .menu{
+    grid-area: menu;
+}
+
+  .headerb img{
+    height: 80px; 
+}
+/***********************
+        menu
+************************
+*/
+ .contenedor .menu {
+   background-color: #bd033b;
+   height: auto;
+}
+.contenedor .menu li{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 30px 50px;
+  text-transform: uppercase;
+    
+}
+
+.contenedor .menu a{
+    color: white;
+    text-decoration: none;
+}
+.contenedor .menu a:hover {
+  color: black;
+  background: #bd033b;
+}
+  
+/*************************
+     CARROUSEL   
+**************************
+   para width:100%
+   quitar max-width
+   y margin */
+
+.slideshow-container{
+
+ max-width: 1000px;
+ margin: 0px auto; /*centrar bloque */   
+   
+
+ width: 100%;
+ position:relative;
+ margin:auto;
+ height: auto;
+ padding: 0px;    
+
+   
+}
+.contenedor .slideshow-container
+{
+   grid-area:slideshow-container;
+   
+}
+.mySlides {
+ display:none;
+}
+
+.mySlides img{
+    width: 100%;
+    height: 500px;
+   
+}
+
+
+/**********************
+     quienes somos
+***********************/
+
+.contenedor .main-somos{
+   
+    /*width: 100%;
+    min-width: 1000px;
+    margin: 0px auto;/*centrear el div
+    */  
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3,1fr);/*cant. de columnas*/
+    grid-template-rows: repeat(1,auto);/*cantidad de filas)*/
+    grid-template-areas: 
+        "texto-1 texto-1 texto-1";
+}
+
+.contenedor .main-somos{
+    grid-area: main-somos;
+    background: #8f9fc0; 
+    
+    /*para width:100% estas lineas no van
+    */
+    max-width: 1000px;
+    margin: 0px auto;
+    height: auto; 
+}
+
+/*para definir un area de cada widget se hace por separado*/
+.contenedor .texto-1{
+    grid-area: texto-1; 
+    padding: 4em;   
+}
+
+.main-somos article{
+    font-size: 1.05em; /*para width 100% en main-widget 1.5em*/
+    color: #F8F8FF ;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+} 
+
+.main-somos .texto-1 h2{
+    color: #F8F8FF;
+}
+
+
+/************************
+        footerb
+*************************
+abarca toda la pantalla
+en forma horizontal*/
+    
+.contenedor .footerb{
+       
+    display: grid;
+    grid-gap: 10px;/*20px;*/
+    grid-template-columns: repeat(3,1fr);/*cant. de columnas*/
+    grid-template-rows: repeat(1,auto);/*cantidad de filas)*/
+    grid-template-areas: 
+        "logof centrof redesf";
+        
+}
+
+.contenedor .footerb{
+    grid-area: footerb;  
+    background:  #bd033b;
+    width:100%;
+    /*max-width:1000px;*/
+    margin: 0px auto;
+    min-height: 100px;
+}
+
+/*definimos las areas de footerb
+  por separado*/
+.contenedor .logof{
+    grid-area: logof;    
+}
+.contenedor .centrof{
+    grid-area: centrof;
+}
+.contenedor .redesf{
+    grid-area: redesf;
+}
+
+.contenedor .logof,
+.contenedor .centrof,
+.contenedor .redesf{
+    background:  #bd033b;
+    color: white;
+    height: auto;
+    display: flex;
+    justify-content: center;/*centramos en el centro del box*/
+     grid-gap: 20px;
+     padding: 10px ;
+       
+    
+}
+
+/*   imagen logof*/
+
+.footerb img {
+    height: 100px;
+}
+/*contenido de centrof*/
+.contenedor .centrof {
+    color: aqua;
+    font-size: 1.05em; 
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #F8F8FF ;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
