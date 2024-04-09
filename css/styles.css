@@ -1,23 +1,5 @@
 
-/*******************************************
-    para un mejor diseño poner en el navegador 
-    inspeccionar elemento, click en la casilla
-    de div contenedor, areas.
-    veremos las areas que definiremos en el div contenedor usando la siguiente instruccion
-    grid template areas:
-        1.-header(3 columnas )
-        2.-contenido y sidebar
-             (2 columnas contenido y 1 columna sidebar)
-        3.-widget-1 widget 2 y sidebar
-           (col.widget1 col. widget-2 sidebar)
-        4.-footer
-    Ademas en cada clase escribiremos :
-    header    --->  grid-area: header;
-    contenido --->  grid-area: contenido;
-    widget-1  --->  grid-area: widget-1;
-    widget-2  --->  grid-area: widget-2;
-***********************************************
-*/
+
 *{
     margin: 0px;
     padding: 0px;
