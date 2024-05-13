@@ -1,253 +1,388 @@
 
-
-*{
-    margin: 0px;
-    padding: 0px;
-}
+/*Barra de Navegacion*/
 body{
-   
-    background: #8f9fc0;
-    font-family: 'Roboto', sans-serif;
+    background-color: beige;
 }
-/***********************
-        contenedor
-************************
- definimos la grilla css
- por areas */
-.contenedor{
-    width: 100%;
-    margin: 0px auto;/*centrar el div*/
-    display: grid;
-    grid-template-columns: repeat(3,1fr);/*cant. de columnas*/
-    grid-template-rows: repeat(4,auto);/*cantidad de filas)*/
-   
-    grid-template-areas: 
-        "headerb headerb headerb"
-        "slideshow-container slideshow-container slideshow-container"
-        "main-somos main-somos main-somos"
-        "footerb footerb footerb";
-}
-/**********************
-        header
-***********************
-*/
-.contenedor .headerb{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(1,auto);
-    grid-template-areas: 
-        "logo menu menu "
-    ;
-
+.navbar{
+    padding: 0.5rem;
+    background-color: rgb(255, 0, 0);
 }
 
-.contenedor .headerb{
-    grid-area: headerb;
-    background: #bd033b;
-    width: 100%;
-    margin: 0px auto;
-    min-height: 80px;
-}
- .contenedor .logo{
-    grid-area: logo;
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
 }
 
-.contenedor .menu{
-    grid-area: menu;
-}
-
-  .headerb img{
-    height: 80px; 
-}
-/***********************
-        menu
-************************
-*/
- .contenedor .menu {
-   background-color: #bd033b;
-   height: auto;
-}
-.contenedor .menu li{
-  display: inline-block;
+.nav-item{
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 2px;
-  margin: 0;
-  padding: 30px 50px;
   text-transform: uppercase;
-    
 }
 
-.contenedor .menu a{
+.nav-item a{
     color: white;
-    text-decoration: none;
 }
-.contenedor .menu a:hover {
-  color: black;
-  background: #bd033b;
+
+.btn-personal{
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+    color: whitesmoke;
+ }
+
+/*  clases secciones grales. */
+
+.seccion-oscura{
+    color: white;
+    background-color: rgb(255, 0, 0);/*#1b1b32;*/
 }
+
+.seccion-texto{
+    font-size: 1.2rem;
+}
+
+.seccion-clara{
+    color: black;
+    background-color: beige;
+   }
+
+   .seccion-descripcion{
+    font-size: 1.2rem;
+    color: #584e4e;
+}
+
+
   
-/*************************
-     CARROUSEL   
-**************************
-   para width:100%
-   quitar max-width
-   y margin */
+/*seccion carrousel*/
 
-.slideshow-container{
+    .slideshow-container{
 
- max-width: 1000px;
- margin: 0px auto; /*centrar bloque */   
-   
-
- width: 100%;
- position:relative;
- margin:auto;
- height: auto;
- padding: 0px;    
-
-   
-}
-.contenedor .slideshow-container
-{
-   grid-area:slideshow-container;
-   
-}
-.mySlides {
- display:none;
-}
-
-.mySlides img{
-    width: 100%;
-    height: 500px;
-   
-}
-
-
-/**********************
-     quienes somos
-***********************/
-
-.contenedor .main-somos{
-   
-    /*width: 100%;
-    min-width: 1000px;
-    margin: 0px auto;/*centrear el div
-    */  
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(3,1fr);/*cant. de columnas*/
-    grid-template-rows: repeat(1,auto);/*cantidad de filas)*/
-    grid-template-areas: 
-        "texto-1 texto-1 texto-1";
-}
-
-.contenedor .main-somos{
-    grid-area: main-somos;
-    background: #8f9fc0; 
-    
-    /*para width:100% estas lineas no van
-    */
-    max-width: 1000px;
-    margin: 0px auto;
-    height: auto; 
-}
-
-/*para definir un area se hace por separado*/
-.contenedor .texto-1{
-    grid-area: texto-1; 
-    padding: 4em;   
-}
-
-.main-somos article{
-    font-size: 1.05em;
-    color: #F8F8FF ;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-} 
-
-.main-somos .texto-1 h2{
-    color: #F8F8FF;
-}
-
-
-/************************
-        footerb
-*************************
-abarca toda la pantalla
-en forma horizontal*/
-    
-.contenedor .footerb{
+        max-width: 1000px;
+        margin: 0px auto; /*centrar bloque */   
+        width: 100%;
+        position:relative;
+        margin:auto;
+        height: auto;
+        padding-top: 6rem;       
+       }
+      
+       .mySlides {
+        display:none;
+       }
        
-    display: grid;
-    grid-gap: 10px;/*20px;*/
-    grid-template-columns: repeat(3,1fr);/*cant. de columnas*/
-    grid-template-rows: repeat(1,auto);/*cantidad de filas)*/
-    grid-template-areas: 
-        "logof centrof redesf";
-        
+       .mySlides img{
+           width: 100%;
+           height: 500px;  
+       }
+
+
+ /*Seccion Principal*/
+ .seccion-titulo{
+    font-size: 2rem;
+    padding: 15px 0;
+    font-family: "rubik dirt" , cursive;
 }
 
-.contenedor .footerb{
-    grid-area: footerb;  
-    background:  #bd033b;
-    width:100%;
-    /*max-width:1000px;*/
-    margin: 0px auto;
-    min-height: 100px;
-}
-
-/*definimos las areas de footerb
-  por separado*/
-.contenedor .logof{
-    grid-area: logof;    
-}
-.contenedor .centrof{
-    grid-area: centrof;
-}
-.contenedor .redesf{
-    grid-area: redesf;
-}
-
-.contenedor .logof,
-.contenedor .centrof,
-.contenedor .redesf{
-    background:  #bd033b;
-    color: white;
-    height: auto;
+section{
     display: flex;
-    justify-content: center;/*centramos en el centro del box*/
-     grid-gap: 20px;
-     padding: 10px ;
-       
-    
-}
-
-/*   imagen logof*/
-
-.footerb img {
-    height: 100px;
-}
-/*contenido de centrof*/
-.contenedor .centrof {
-    color: aqua;
-    font-size: 1.05em; 
-    display: flex;
-    text-align: center;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #F8F8FF ;
-} 
+    padding-top: 1.5rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-family: "Rubik Dirt", cursive ;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/*Seccion Meraki*/
+.meraki{
+    background-color: beige;
+    min-height: 450px;
+    text-align: center;
+    max-width: 1000px;
+}
+
+.meraki-principal{
+    padding: 3rem;
+}
+
+.meraki-principal h2{
+    font-size: 1.5rem;
+    color: #615151;
+}
+
+/*seccion sobre-meraki*/
+.meraki-imagen{
+    width: 400px;
+    height: 400px;
+    margin:20px;
+   
+}
+
+.sobre-meraki{
+    height: 500px;
+    padding: 10px;
+}
+
+.sobre-meraki .contenedor{
+    max-width: 600px;
+    text-align: center;
+}
+
+/*Experiencia*/
+.experiencia{
+ padding: 40px 40px 60px 40px;
+}
+
+
+.experiencia .columna{
+    padding: 20px;
+    border: 2px solid #8080804d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.2s ease-in;/*transicion en las columnas*/
+}
+
+/*hover en columnas experiencia*/
+.experiencia .columna:hover {
+    color:whitesmoke;
+    background-color: #1b1b32;
+}
+
+.experiencia-titulo p{
+    font-size: 20px; 
+    margin:10px 0;
+    
+}
+.experiencia a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    
+}
+.experiencia .columna a:hover{
+    color: whitesmoke;
+}
+
+.experiencia i{
+    font-size: 2.5rem;
+    color: #7ade30;
+    background-color: #0a0a23;
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+
+.badges-contenedor{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.badge{
+    margin: 5px;
+}
+
+/*seccion Trabajos */
+.trabajos-recientes{
+    padding: 6rem 4rem;
+}
+
+.texto-negro{
+    color: black;
+}
+
+.texto-blanco{
+ color: white;
+}
+
+.trabajos-recientes img{
+   height: 100%;
+   width: 100%;
+   padding: 10px;
+   border-radius: 10px;
+   display: block;
+   transition: all 0.2s ease;
+}
+
+.trabajos-contenedor{
+    padding-top: 40px;
+    margin-bottom: 30px;
+}
+
+.overlay{
+    transition: all 0.2s ease;
+    opacity: 0; /*transparente*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay .iconos-contenedor{
+    display: flex;
+}
+
+.overlay i{
+    color: black;
+    font-size: 60px;
+    margin: 10px;
+}
+
+
+.overlay p{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.trabajo{
+ position: relative;
+}
+
+.trabajo:hover img{
+   opacity: 0.2;
+}
+
+.trabajo:hover .overlay{
+     opacity: 1;/*opaco*/
+}
+
+
+/*Footer*/
+footer{
+    min-height: 300px;
+}
+
+.footer-logo{
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+}
+
+.footer-texto{
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.iconos-redes-sociales a{
+ width: 50px;
+ height: 50px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 2px;
+ margin: 10px;
+ border: 2px solid white;
+ border-radius: 50%;
+ transition: all 0.2s ease-in; 
+}
+
+.iconos-redes-sociales i{
+    color: white;
+    font-size: 1.5rem;
+    transition:  all 0.2s ease-in;
+}
+
+/*efecto hoover para los iconos*/
+.iconos-redes-sociales a:hover{
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+
+.iconos-redes-sociales a:hover i{
+    color:black;
+    
+}
+
+/*****************************
+    archivo nosotros.html
+******************************/
+.seccion-nosotros{
+    padding-top: 6rem;
+    color: black;
+    background-color: beige;
+}
+
+.espacio-footer{
+ height: 200px;
+ background-color: beige;
+ 
+}
+
+
+/*  ANIMACION */
+.autorf {
+    /*color: white;/*rgb(12, 12, 12);*/
+    font-size: 1.05em; 
+    display: flex;
+    text-align: right;
+    align-items: center;
+    justify-content: center;
+ } 
+.grupo{
+  /*  color: rgb(241, 239, 236);*/
+   color: white;/*black;*/
+   animation-name: cambiarColor;
+   animation-duration: 4s;
+   animation-timing-function: linear;
+   animation-iteration-count:normal ;
+}
+@keyframes cambiarColor {
+   0% {color:rgb(110, 108, 107); width: 60%;}
+   /* Primer fotograma */
+   50% {color: rgb(141, 138, 138); width: 80%;}
+   /* Segundo fotograma */
+ /*  100% {color: rgb(83, 81, 81); width: 100%;}
+    Último fotograma */
+    100% {color: rgb(10, 10, 10); width: 100%;}
+  }
+
+
+  /**********************************
+        archivo contacto.html
+   ***********************************/
+   .main-contacto{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+   } 
+   
+   .contacto-input{
+    display: block;
+    align-items: center;
+    justify-content: center;
+   }
+
+   form{
+    border: 5px solid #C7E3FF;
+    padding: 2rem 2rem;
+    font-size: 1.2rem;
+   }
 
 
 
 
+/*******************************************************
+******************* MEDIA QUERYS ***********************
+********************************************************
 
-
-
-
-
-
-
-
-
+definimos un media query para que no se vea la imagen logo*/
+@media screen and (max-width:767px) {
+    .navbar-brand{
+        display: none;
+    }
+   .container{
+     
+        --bs-gutter-x: 0rem;
+   } 
+   .trabajos-recientes{
+    padding: 6rem 1rem;
+}
+}
