@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Grupo 13 The Coders">
-    <meta name="description" content="proyecto web meraki">
-    <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--Bootstrap-->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!--Iconos Bootstrap-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-     <!--GoogleFonts Roboto-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="author" content="Grupo 13 The Coders">
+<meta name="description" content="proyecto web meraki">
+<meta name="keywords" content="HTML, CSS, JAVASCRIPT">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!--Bootstrap-->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!--Iconos Bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ <!--GoogleFonts Roboto-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">  
-    
-     <!--Css-->
-     <link rel="stylesheet" href="./css/styles.css">
-     <!--Fabicon-->
-     <link rel="shortcut icon" href="./images/logoMeraki.png" type="image/x-icon">
-     <title>Meraki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">  
+
+ <!--Css-->
+ <link rel="stylesheet" href="./css/styles.css">
+ <!--Fabicon-->
+ <link rel="shortcut icon" href="./images/logoMeraki.png" type="image/x-icon">
+ <title>Meraki</title>
 </head>
 <body>
-    <!--Barra de Navegacion-->
-    <nav class="navbar navbar-expand-md navbar-light fixed-top"><!--agregue la clase fixed top para que se quede fija la navbar-->
+     <!--Barra de Navegacion-->
+     <nav class="navbar navbar-expand-md navbar-light fixed-top"><!--agregue la clase fixed top para que se quede fija la navbar-->
         <div class="container-fluid">
           <button class="navbar-toggler btn-personal" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbar-toggler">
-            <a class="navbar-brand" href="#"><img src="./images/logoMeraki.png" width="70"  alt="Meraki Corte por Laser"></a>
+            <a class="navbar-brand" href="index.html"><img src="./images/logoMeraki.png" width="70"  alt="Meraki Corte por Laser"></a>
             <ul class="navbar-nav d-flex justify-content-center align-items-center ">
               <li class="nav-item">
                  <a class="nav-link " aria-current="page" href="index.html">INICIO</a>
@@ -53,79 +53,78 @@
         </div>
     </nav>
 
-   <!--Formulario de Contacto-->
-   <section id="contacto" class="container main-contacto">
-    <form id="form-cargar" >
-        <div>
-            <label for="Nombre">Nombre :</label>
-            <input  type="text" name="nombre" id="nombre" required 
-            class="contacto-input" ><br>
-        </div>
-        <div>
-            <label for="Celular">Celular :</label>
+     <!--Formulario de Contacto-->
+   
+    <section id="contacto" class="container">
+      
+      <form class="form-cargar" >
+        <h1 style="text-align: center;">Formulario de Contacto</h1>
+          <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" 
+            required class="contacto-input">
+   
+          <label for="Celular">Celular :</label>
             <input type="tel" name="celular" id="celular" pattern="[0-9]{10}" 
-                   title="10 Números sin guiones"  required class="contacto-input"><br>
-            
-        </div>
-        <div>
-            <label for="Email">Correo de contacto :</label>
-            <input type="email" name="email" id="email" required class="contacto-input"><br>
-        </div>
-        <div>
-            <label for="Cliente">¿Es Cliente?</label>  
-            <input type="checkbox" name="cliente" id="cliente"  class="contacto-input"><br>
-            
-        </div>
-        <div>
-            <label for="Consulta">Su Consulta</label>
+             title="10 Números sin guiones"  
+                  required class="contacto-input">
+          
+          <label for="Email">Correo de contacto :</label>
+            <input type="email" name="email" id="email" 
+                   required class="contacto-input">
+
+          <label for="Cliente">¿Es Cliente?</label>  
+            <input type="checkbox" name="cliente" id="cliente"  
+                   class="contacto-input"> 
+                   
+          <label for="Consulta">Su Consulta</label>
             <textarea name="consulta" id="consulta" 
-            required class="contacto-input" rows="3" cols="30"></textarea><br>
+              required class="contacto-input" rows="3" cols="30"></textarea>         
+        
+          <input type="submit" value="Enviar" class="btnEnviarC">
+          <div>
+            <label type="text" id="respuesta"></label>
         </div>
-        <div>
-            <input type="submit" value="Consultar" >
-        </div>
+             
+      </form>
+    </section>
+</div>
     
-    </form>   
-</section>
-
-     <!--Footer-->
-   <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
-    <img class="footer-logo" src="./images/logoMeraki.png" alt="">
-    <p class="footer-texto text-center">
-      Ampliamos la frontera de la imaginacion.<br>Meraki &copy; 2024
-
-      <div class="container autorf">
-        <span class="grupo">Derechos Reservados Grupo 13</span>
-      </div>
-
-    </p>
-       <!--iconos redes sociales-->
-       <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
-         <!--whastapp-->
-          <a href="https://wa.me/5491122334455" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-whatsapp"></i>
-          </a>
-  
-          <!--instagram-->
-          <a href="https://www.instagram.com/merakisustentable/?hl=es" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-instagram"></i>
-          </a>
-  
-          <!--facebook-->
-          <a href="https://www.facebook.com/profile.php?id=100059057927518&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-facebook"></i>
-          </a>
-  
-          <!--correo-->
-          <a href="mailto:meraki@gmail.com" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-envelope"></i>
-          </a>
-       </div>
-   </footer>
-  
-  <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
-
+    <!--Footer-->
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+        <img class="footer-logo" src="./images/logoMeraki.png" alt="">
+        <p class="footer-texto text-center">
+          Ampliamos la frontera de la imaginacion.<br>Meraki &copy; 2024
+    
+          <div class="container autorf">
+            <span class="grupo">Derechos Reservados Grupo 13</span>
+          </div>
+    
+        </p>
+           <!--iconos redes sociales-->
+           <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+             <!--whastapp-->
+              <a href="https://wa.me/5491122334455" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+      
+              <!--instagram-->
+              <a href="https://www.instagram.com/meraki6328?igsh=eWpqb2czdmVibzJr" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram"></i>
+              </a>
+      
+              <!--facebook-->
+              <a href="https://www.facebook.com/profile.php?id=100059057927518&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-facebook"></i>
+              </a>
+      
+              <!--correo-->
+              <a href="mailto:meraki@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-envelope"></i>
+              </a>
+           </div>
+    </footer>
+          
+      <script src="./js/miraki.js"></script>
+    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-</html>
+</html>  
