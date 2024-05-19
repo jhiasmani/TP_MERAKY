@@ -50,9 +50,7 @@ body{
     font-size: 1.2rem;
     color: #584e4e;
 }
-
-
-  
+ 
 /*seccion carrousel*/
 
     .slideshow-container{
@@ -144,7 +142,7 @@ h1{
     padding: 20px;
     border: 2px solid #8080804d;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/*column*/
     align-items: center;
     justify-content: space-evenly;
     transition: all 0.2s ease-in;/*transicion en las columnas*/
@@ -314,13 +312,130 @@ footer{
 .espacio-footer{
  height: 200px;
  background-color: beige;
+ padding-top: 4rem;
  
 }
 
+  /**********************************
+        archivo contacto.html
+   ***********************************/  
+   .contacto-input{
+    margin-bottom: 1rem;
+    
+   }
+
+   .form-cargar{
+    border: 5px solid #C7E3FF;
+    border-radius: 10px;
+    padding: 2rem;
+    font-size: 1.2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+   }
+   .form-cargar h1 {
+   
+    font-size: 2rem;
+}
+
+   #contacto{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+   }
+
+   .btnEnviarC{
+    padding: 15px;
+    margin-top: 10px;
+    background-color: rgb(255,0,0);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+   }
+
+
+/***************************************
+      archivo compras.html
+***************************************/
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.formulario-compra {
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid #C7E3FF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-compra h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.formulario-compra label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.formulario-compra input[type="text"],
+.formulario-compra input[type="email"],
+.formulario-compra select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.formulario-compra input[type="submit"],
+.formulario-compra input[type="button"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: rgb(255,0,0);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.formulario-compra input[type="button"]:hover {
+    background-color: #ab022f;
+}
+
+#miniatura {
+    display: block;
+    margin: 0 auto;
+}
+   
+/*******************************************
+        archivo stock.html
+*********************************************/
+.stock-imagenes img{
+     height: 400px;
+}
 
 /*  ANIMACION */
 .autorf {
-    /*color: white;/*rgb(12, 12, 12);*/
     font-size: 1.05em; 
     display: flex;
     text-align: right;
@@ -328,8 +443,7 @@ footer{
     justify-content: center;
  } 
 .grupo{
-  /*  color: rgb(241, 239, 236);*/
-   color: white;/*black;*/
+   color: white;
    animation-name: cambiarColor;
    animation-duration: 4s;
    animation-timing-function: linear;
@@ -340,43 +454,16 @@ footer{
    /* Primer fotograma */
    50% {color: rgb(141, 138, 138); width: 80%;}
    /* Segundo fotograma */
- /*  100% {color: rgb(83, 81, 81); width: 100%;}
-    Último fotograma */
     100% {color: rgb(10, 10, 10); width: 100%;}
   }
 
-
-  /**********************************
-        archivo contacto.html
-   ***********************************/
-   .main-contacto{
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-   } 
-   
-   .contacto-input{
-    display: block;
-    align-items: center;
-    justify-content: center;
-   }
-
-   form{
-    border: 5px solid #C7E3FF;
-    padding: 2rem 2rem;
-    font-size: 1.2rem;
-   }
-
-
-
-
 /*******************************************************
 ******************* MEDIA QUERYS ***********************
-********************************************************
+*******************************************************/
 
-definimos un media query para que no se vea la imagen logo*/
 @media screen and (max-width:767px) {
     .navbar-brand{
-        display: none;
+        display: none;  
     }
    .container{
      
@@ -384,5 +471,47 @@ definimos un media query para que no se vea la imagen logo*/
    } 
    .trabajos-recientes{
     padding: 6rem 1rem;
+}
+.seccion-nosotros{
+    padding-top: 16rem;
+}
+.espacio-footer{
+    padding-top: 11rem;
+    padding-bottom: 5rem;
+   }
+
+ .form-cargar{
+    font-size: 1.1rem;
+
+ }  
+ .form-cargar h1{
+    font-size: 1.4rem;
+ } 
+ 
+ #contacto{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+ }
+
+ .stock-imagenes img{
+     height: 250px;
+ }
+
+ .formulario-compra h1 {
+    font-size: 1.4rem;
+}
+
+.formulario-compra{
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.contenedor{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 }
