@@ -57,27 +57,27 @@
    
     <section id="contacto" class="container">
       
-      <form class="form-cargar" >
+      <form class="form-cargar" id="form_contacto">
         <h1 style="text-align: center;">Formulario de Contacto</h1>
           <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" 
+            <input type="text" id="nombreCt" name="nombreCont" 
             required class="contacto-input">
    
           <label for="Celular">Celular :</label>
-            <input type="tel" name="celular" id="celular" pattern="[0-9]{10}" 
+            <input type="tel" name="celularCont" id="celularCt" pattern="[0-9]{10}" 
              title="10 Números sin guiones"  
                   required class="contacto-input">
           
           <label for="Email">Correo de contacto :</label>
-            <input type="email" name="email" id="email" 
+            <input type="email" name="emailCont" id="emailCt" 
                    required class="contacto-input">
 
           <label for="Cliente">¿Es Cliente?</label>  
-            <input type="checkbox" name="cliente" id="cliente"  
+            <input type="checkbox" name="clienteCont" id="clienteCt"  
                    class="contacto-input"> 
                    
           <label for="Consulta">Su Consulta</label>
-            <textarea name="consulta" id="consulta" 
+            <textarea name="consultaCont" id="consultaCt" 
               required class="contacto-input" rows="3" cols="30"></textarea>         
         
           <input type="submit" value="Enviar" class="btnEnviarC">
