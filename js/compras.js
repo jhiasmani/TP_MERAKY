@@ -10,6 +10,7 @@ function RecibirCompra(e){
     let cDireccion = document.getElementById("direccion").value
     let cCodpostal = document.getElementById("codpostal").value
     let cProducto = document.getElementById("imagen").value
+    respuesta.innerHTML=""
     respuesta.innerHTML+=`
         <div >
             <div >
